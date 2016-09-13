@@ -32,12 +32,12 @@ For more information, please refer to <http://unlicense.org>
 
 // CONFIGURATION
 //=========================================================================================================================
-#define NICKNAME "SKYGREG"
+#define NICKNAME "PHLARP"
 
 // video system
 //=============================
-#define PAL
-//#define NTSC
+//#define PAL
+#define NTSC
 
 // MAX7456 Charset (change if you get sensless signs)
 //=============================
@@ -50,34 +50,34 @@ For more information, please refer to <http://unlicense.org>
 
 // Filter for ESC datas (higher value makes them less erratic) 0 = no filter, 20 = very strong filter
 //=============================
-#define ESC_FILTER 10
+#define ESC_FILTER 7
 
 // displayed datas
 //=============================
-#define DISPLAY_NICKNAME
+//#define DISPLAY_NICKNAME
 #define DISPLAY_TIMER
-#define DISPLAY_RC_THROTTLE
-//#define DISPLAY_COMB_CURRENT
+//#define DISPLAY_RC_THROTTLE
+#define DISPLAY_COMB_CURRENT
 #define DISPLAY_LIPO_VOLTAGE
 #define DISPLAY_MA_CONSUMPTION
 //#define DISPLAY_ESC_KRPM
 //#define DISPLAY_ESC_CURRENT
-#define DISPLAY_ESC_TEMPERATURE
+//#define DISPLAY_ESC_TEMPERATURE
 
 // displayed datas in reduced mode
 //=============================
-#define RED_DISPLAY_NICKNAME
+//#define RED_DISPLAY_NICKNAME
 #define RED_DISPLAY_TIMER
 //#define RED_DISPLAY_RC_THROTTLE
-//#define RED_DISPLAY_COMB_CURRENT
+#define RED_DISPLAY_COMB_CURRENT
 #define RED_DISPLAY_LIPO_VOLTAGE
 #define RED_DISPLAY_MA_CONSUMPTION
-//#define RED_DISPLAY_ESC_KRPM
-//#define RED_DISPLAY_ESC_CURRENT
+#define RED_DISPLAY_ESC_KRPM
+#define RED_DISPLAY_ESC_CURRENT
 #define RED_DISPLAY_STATS
 #define RED_DISPLAY_ESC_TEMPERATURE
+#define RED_DISPLAY_MAXC
 
-//#define RED_DISPLAY_MAXC
 // configure max C with Lipo capacity:
 #if defined(RED_DISPLAY_MAXC)
 const int LIPOS[] = {1300,1500,1000};
@@ -89,11 +89,11 @@ const int LIPOS[] = {1300,1500,1000};
 
 // reduced mode channel config
 //=============================
-#define RED_MODE_AUX_CHAN 0 // 0-4, 0 = none
+#define RED_MODE_AUX_CHAN 2 // 0-4, 0 = none
 
-#define RED_ON_AUX_LOW
+//#define RED_ON_AUX_LOW
 //#define RED_ON_AUX_MID
-//#define RED_ON_AUX_HIGH
+#define RED_ON_AUX_HIGH
 
 // internals
 //=============================
@@ -213,7 +213,7 @@ uint8_t print_int16(int16_t p_int, char *str, uint8_t dec, uint8_t AlignLeft){
         }
         
         return CharPos;
-}	
+} 
 
 void print_time(unsigned long time, char *time_str) {
     uint16_t seconds = time / 1000;
