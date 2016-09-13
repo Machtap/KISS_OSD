@@ -74,7 +74,7 @@ For more information, please refer to <http://unlicense.org>
 #define RED_DISPLAY_MA_CONSUMPTION
 #define RED_DISPLAY_ESC_KRPM
 #define RED_DISPLAY_ESC_CURRENT
-#define RED_DISPLAY_STATS
+//#define RED_DISPLAY_STATS
 #define RED_DISPLAY_ESC_TEMPERATURE
 #define RED_DISPLAY_MAXC
 
